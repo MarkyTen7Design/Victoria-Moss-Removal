@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Victoria Moss Removal — Roof Cleaning & Exterior Services, Victoria BC</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -82,9 +85,30 @@
     }
     .nav-link:hover { color: #f5f0e4; }
 
+    /* ── ROOF BANNER ── */
+    #roof-banner {
+      background: #000;
+      height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 72px; /* clear fixed nav */
+      overflow: hidden;
+    }
+    #roof-banner img {
+      width: 33vw;
+      max-height: calc(30vh - 72px);
+      object-fit: contain;
+      display: block;
+    }
+    #roof-banner .wm-cover {
+      position: absolute; bottom: 0; right: 0;
+      width: 3%; height: 20%; background: #000;
+    }
+
     /* ── HERO ── */
     .hero {
-      min-height: 100svh;
+      height: 70vh;
       background: #1a3d26;
       background-image:
         radial-gradient(ellipse 100% 80% at 40% 20%, rgba(114,204,46,0.22) 0%, transparent 50%),
@@ -96,7 +120,7 @@
       position: relative; overflow: hidden;
     }
     @media (min-width: 1024px) {
-      .hero { grid-template-columns: 1fr 380px; }
+      .hero { grid-template-columns: 1fr 320px; }
     }
 
     /* decorative botanical lines */
@@ -110,7 +134,7 @@
       background: rgba(11,30,18,0.35);
       border: 1px solid rgba(245,240,228,0.12);
       border-radius: 6px;
-      padding: 20px 22px;
+      padding: 12px 16px;
       backdrop-filter: blur(14px);
       transition: background 0.3s, border-color 0.3s;
     }
@@ -120,13 +144,13 @@
     }
     .stat-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem; font-weight: 600;
+      font-size: 2rem; font-weight: 600;
       line-height: 1; letter-spacing: -0.03em;
       color: #f5f0e4;
     }
     .stat-unit {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem; font-weight: 300;
+      font-size: 1.3rem; font-weight: 300;
       color: #72cc2e;
     }
 
@@ -462,16 +486,8 @@
   <div style="max-width:1380px; margin:0 auto; padding:0 28px;">
     <div style="display:flex; align-items:center; justify-content:space-between; height:72px;">
 
-      <a href="#" style="text-decoration:none; display:flex; align-items:center; gap:12px;">
-        <div style="width:34px;height:34px;border-radius:4px;background:#5ba624;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
-            <path d="M12 3C8 3 5 7 5 11c0 3 1.5 5 4 6.5"/><path d="M12 3c2.5 2.5 4.5 6.5 3.5 10.5-.8 3-2.8 4-3.5 4.5"/><path d="M12 3c-2.5 2.5-4.5 6.5-3.5 10.5.8 3 2.8 4 3.5 4.5"/><line x1="12" y1="21" x2="12" y2="15"/>
-          </svg>
-        </div>
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem;color:#f5f0e4;letter-spacing:-0.01em;line-height:1.1;">Victoria Moss Removal</div>
-          <div style="font-size:0.58rem;letter-spacing:0.13em;text-transform:uppercase;color:#72cc2e;font-weight:600;">Exterior Cleaning Experts</div>
-        </div>
+      <a href="#" style="text-decoration:none;display:inline-flex;align-items:center;">
+        <img src="assets/logo.png" alt="Victoria Moss Removal" style="height:44px;width:auto;display:block;mix-blend-mode:screen;">
       </a>
 
       <nav style="display:none;" id="desktop-nav" class="lg:flex" style="display:flex;gap:36px;align-items:center;">
@@ -481,9 +497,9 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="hidden lg:flex" style="align-items:center;gap:12px;">
-        <a href="tel:2509848131" class="btn-moss" style="padding:11px 22px;font-size:0.75rem;">
+        <a href="tel:5550000000" class="btn-moss" style="padding:11px 22px;font-size:0.75rem;">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .14h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          250-984-8131
+          (555) 000-0000
         </a>
       </div>
 
@@ -500,15 +516,23 @@
         <a href="#about"    class="mob-link nav-link" style="padding:12px 4px;display:block;font-size:0.75rem;">About</a>
         <a href="#areas"    class="mob-link nav-link" style="padding:12px 4px;display:block;font-size:0.75rem;">Areas</a>
         <a href="#contact"  class="mob-link nav-link" style="padding:12px 4px;display:block;font-size:0.75rem;">Contact</a>
-        <a href="tel:2509848131" class="btn-moss" style="margin-top:12px;justify-content:center;">Call 250-984-8131</a>
+        <a href="tel:5550000000" class="btn-moss" style="margin-top:12px;justify-content:center;">Call (555) 000-0000</a>
       </div>
     </div>
   </div>
 </header>
 
 
+<!-- ═══════════════════════ ROOF BANNER ═══════════════════════ -->
+<div id="roof-banner">
+  <div style="position:relative;display:inline-block;">
+    <img src="assets/logo.png" alt="Victoria Moss Removal">
+    <div class="wm-cover"></div>
+  </div>
+</div>
+
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
-<section class="hero" style="padding-top:72px;">
+<section class="hero">
 
   <!-- botanical SVG deco -->
   <svg class="hero-deco" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -525,77 +549,64 @@
   </svg>
 
   <!-- Left: main content -->
-  <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 28px 60px;max-width:860px;" id="hero-left">
+  <div style="display:flex;flex-direction:column;justify-content:center;padding:28px 28px 20px;max-width:860px;" id="hero-left">
     <div style="max-width:1380px;margin:0 auto;width:100%;padding-left:max(0px, calc((100vw - 1380px)/2));">
 
-      <!-- Company name wordmark -->
-      <div class="reveal" style="margin-bottom:24px;display:flex;align-items:center;gap:14px;">
-        <div style="width:38px;height:38px;border-radius:5px;background:#5ba624;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(91,166,36,0.4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
-            <path d="M12 3C8 3 5 7 5 11c0 3 1.5 5 4 6.5"/><path d="M12 3c2.5 2.5 4.5 6.5 3.5 10.5-.8 3-2.8 4-3.5 4.5"/><path d="M12 3c-2.5 2.5-4.5 6.5-3.5 10.5.8 3 2.8 4 3.5 4.5"/><line x1="12" y1="21" x2="12" y2="15"/>
-          </svg>
-        </div>
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:#f5f0e4;letter-spacing:-0.01em;line-height:1.1;">Victoria Moss Removal</div>
-          <div style="font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(114,204,46,0.85);margin-top:2px;">Exterior Cleaning Experts · Victoria, BC</div>
-        </div>
-      </div>
-
-      <h1 class="reveal d1" style="font-size:clamp(3.8rem,9.5vw,9rem);font-weight:600;letter-spacing:-0.035em;line-height:0.9;color:#f5f0e4;margin-bottom:28px;">
+      <h1 class="reveal d1" style="font-size:clamp(2.2rem,4vw,4.2rem);font-weight:600;letter-spacing:-0.035em;line-height:0.9;color:#f5f0e4;margin-bottom:14px;">
         Roof<br/>
         Moss<br/>
         <em style="color:#72cc2e;font-style:italic;font-weight:300;">Removal.</em>
       </h1>
 
-      <p class="reveal d2" style="font-size:1.05rem;line-height:1.72;color:rgba(245,240,228,0.6);max-width:460px;margin-bottom:40px;">
+      <p class="reveal d2" style="font-size:0.88rem;line-height:1.65;color:rgba(245,240,228,0.6);max-width:420px;margin-bottom:18px;">
         Victoria's trusted exterior cleaning specialists. Roof de-mossing, gutter cleaning, pressure washing &amp; more — with a 1–2 year warranty and free quote, always.
       </p>
 
-      <div class="reveal d3" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:56px;">
+      <div class="reveal d3" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;">
         <a href="#contact" class="btn-moss">
           Get a Free Quote
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="tel:2509848131" class="btn-outline">
+        <a href="tel:5550000000" class="btn-outline">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .14h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Call Now
         </a>
       </div>
 
       <!-- trust row -->
-      <div class="reveal d4" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding-top:32px;border-top:1px solid rgba(245,240,228,0.08);">
-        <div style="display:flex;align-items:center;gap:9px;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          <span style="font-size:0.8rem;color:rgba(245,240,228,0.5);font-weight:500;">1–2 Year Warranty</span>
+      <div class="reveal d4" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding-top:16px;border-top:1px solid rgba(245,240,228,0.08);">
+        <div style="display:flex;align-items:center;gap:7px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <span style="font-size:0.72rem;color:rgba(245,240,228,0.5);font-weight:500;">1–2 Year Warranty</span>
         </div>
-        <div style="display:flex;align-items:center;gap:9px;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h4"/></svg>
-          <span style="font-size:0.8rem;color:rgba(245,240,228,0.5);font-weight:500;">Free Gutter Clean with Moss Removal</span>
+        <div style="display:flex;align-items:center;gap:7px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h4"/></svg>
+          <span style="font-size:0.72rem;color:rgba(245,240,228,0.5);font-weight:500;">Free Gutter Clean with Moss Removal</span>
         </div>
-        <div style="display:flex;align-items:center;gap:9px;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-          <span style="font-size:0.8rem;color:rgba(245,240,228,0.5);font-weight:500;">Honest Pricing, Always</span>
+        <div style="display:flex;align-items:center;gap:7px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <span style="font-size:0.72rem;color:rgba(245,240,228,0.5);font-weight:500;">Honest Pricing, Always</span>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Right: stat cards (desktop) -->
-  <div class="hidden lg:flex" style="flex-direction:column;justify-content:center;gap:12px;padding:100px 40px 80px 20px;" id="hero-right">
+  <div class="hidden lg:flex" style="flex-direction:column;justify-content:center;gap:8px;padding:28px 32px 20px 16px;" id="hero-right">
     <div class="stat-card reveal d2">
-      <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.35);margin-bottom:12px;">Roofs De-mossed</div>
+      <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.35);margin-bottom:6px;">Roofs De-mossed</div>
       <div class="stat-num">500<span class="stat-unit">+</span></div>
-      <div style="font-size:0.8rem;color:rgba(245,240,228,0.4);margin-top:8px;line-height:1.5;">across Greater Victoria &amp; the Island</div>
+      <div style="font-size:0.72rem;color:rgba(245,240,228,0.4);margin-top:4px;line-height:1.4;">across the local region</div>
     </div>
     <div class="stat-card reveal d3">
-      <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.35);margin-bottom:12px;">Warranty on Every Job</div>
-      <div class="stat-num" style="color:#72cc2e;">1–2<span style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:rgba(245,240,228,0.5);"> yr</span></div>
-      <div style="font-size:0.8rem;color:rgba(245,240,228,0.4);margin-top:8px;line-height:1.5;">we come back free if anything's off</div>
+      <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.35);margin-bottom:6px;">Warranty on Every Job</div>
+      <div class="stat-num" style="color:#72cc2e;">1–2<span style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(245,240,228,0.5);"> yr</span></div>
+      <div style="font-size:0.72rem;color:rgba(245,240,228,0.4);margin-top:4px;line-height:1.4;">we come back free if anything's off</div>
     </div>
     <div class="stat-card reveal d4">
-      <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.35);margin-bottom:12px;">Service Areas</div>
+      <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.35);margin-bottom:6px;">Service Areas</div>
       <div class="stat-num">17<span class="stat-unit">+</span></div>
-      <div style="font-size:0.8rem;color:rgba(245,240,228,0.4);margin-top:8px;line-height:1.5;">Victoria to Nanaimo &amp; everywhere between</div>
+      <div style="font-size:0.72rem;color:rgba(245,240,228,0.4);margin-top:4px;line-height:1.4;">serving cities across the region</div>
     </div>
 
   </div>
@@ -616,13 +627,13 @@
     <!-- Heading row -->
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:40px;">
       <div class="reveal">
-        <div class="section-label" style="color:#5ba624;margin-bottom:12px;">Real Results · Victoria BC</div>
+        <div class="section-label" style="color:#5ba624;margin-bottom:12px;">Real Results · Local Work</div>
         <h2 style="font-size:clamp(2.4rem,5.5vw,5rem);font-weight:600;letter-spacing:-0.035em;line-height:0.92;color:#f5f0e4;">
           See What We<br/><em style="color:#72cc2e;font-style:italic;font-weight:300;">Can Do For You</em>
         </h2>
       </div>
       <p class="reveal d2" style="font-size:0.9rem;line-height:1.72;color:rgba(245,240,228,0.45);max-width:280px;padding-bottom:6px;">
-        One roof, transformed. This is the standard we bring to every job across Greater Victoria — guaranteed.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
     </div>
 
@@ -726,7 +737,7 @@
             <h3 style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;letter-spacing:-0.025em;color:#f5f0e4;line-height:1.05;">Roof Moss Removal</h3>
           </div>
           <p style="font-size:0.9rem;line-height:1.72;color:rgba(245,240,228,0.55);max-width:480px;">
-            Our core specialty. We safely clear moss, lichen &amp; algae from all shingle types — extending roof life and protecting your home's structure. Every job includes a thorough inspection and a 1–2 year warranty. If anything isn't right, we come back free.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.
           </p>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:32px;padding-top:24px;border-top:1px solid rgba(245,240,228,0.08);">
@@ -747,7 +758,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 6l3 4M21 6l-3 4M6 10v5a1 1 0 001 1h10a1 1 0 001-1v-5"/><line x1="12" y1="16" x2="12" y2="20"/><line x1="9" y1="20" x2="15" y2="20"/></svg>
           </div>
           <h3 style="font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:600;letter-spacing:-0.02em;color:#fff;margin-bottom:16px;">Gutter Cleaning</h3>
-          <p style="font-size:0.88rem;line-height:1.68;color:rgba(255,255,255,0.7);">Professional eavestrough clearing — blowing, vacuuming, or hand-scooping with full downspout flow confirmation.</p>
+          <p style="font-size:0.88rem;line-height:1.68;color:rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
         </div>
         <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.2);">
           <span style="font-size:0.75rem;font-weight:700;color:#fff;background:rgba(255,255,255,0.2);padding:6px 14px;border-radius:100px;">★ Free with Moss Removal</span>
@@ -761,7 +772,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5ba624" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
         </div>
         <h3 style="font-size:1.65rem;font-weight:600;letter-spacing:-0.02em;color:#0b1e12;margin-bottom:12px;">Pressure Washing</h3>
-        <p style="font-size:0.86rem;line-height:1.68;color:rgba(11,30,18,0.55);">4,000 PSI for driveways &amp; hard surfaces. Soft-wash methods for delicate areas. Sodium hypochlorite available for maximum results.</p>
+        <p style="font-size:0.86rem;line-height:1.68;color:rgba(11,30,18,0.55);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.</p>
       </div>
 
       <!-- 4 — Window Cleaning -->
@@ -771,7 +782,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b1e12" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
         </div>
         <h3 style="font-size:1.65rem;font-weight:600;letter-spacing:-0.02em;color:#0b1e12;margin-bottom:12px;">Window Cleaning</h3>
-        <p style="font-size:0.86rem;line-height:1.68;color:rgba(11,30,18,0.55);">Crystal-clear windows &amp; skylights by hand or water-fed pole system. Streak-free results every time.</p>
+        <p style="font-size:0.86rem;line-height:1.68;color:rgba(11,30,18,0.55);">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
       <!-- 5 — Gutter Installation -->
@@ -781,7 +792,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#72cc2e" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
         </div>
         <h3 style="font-size:1.65rem;font-weight:600;letter-spacing:-0.02em;color:#f5f0e4;margin-bottom:12px;">Gutter Installation</h3>
-        <p style="font-size:0.86rem;line-height:1.68;color:rgba(245,240,228,0.5);">Seamless 5-inch K-style eavestrough &amp; downspouts. Machine-formed on-site. Other profiles sourced at supplier prices.</p>
+        <p style="font-size:0.86rem;line-height:1.68;color:rgba(245,240,228,0.5);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud.</p>
       </div>
 
       <!-- 6 — Gutter Repair (half) -->
@@ -793,7 +804,7 @@
           </div>
           <div>
             <h3 style="font-size:1.65rem;font-weight:600;letter-spacing:-0.02em;color:#0b1e12;margin-bottom:10px;">Gutter Repair</h3>
-            <p style="font-size:0.86rem;line-height:1.68;color:rgba(11,30,18,0.55);">Leaky corners, sagging sections, overflowing or misaligned downspouts — we diagnose and fix it at a fair price.</p>
+            <p style="font-size:0.86rem;line-height:1.68;color:rgba(11,30,18,0.55);">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
@@ -807,7 +818,7 @@
           </div>
           <div>
             <h3 style="font-size:1.65rem;font-weight:600;letter-spacing:-0.02em;color:#f5f0e4;margin-bottom:10px;">Christmas Lights</h3>
-            <p style="font-size:0.86rem;line-height:1.68;color:rgba(245,240,228,0.5);">Professional install &amp; takedown. Premium North American lights. We design, install, and store them free for next season.</p>
+            <p style="font-size:0.86rem;line-height:1.68;color:rgba(245,240,228,0.5);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
           </div>
         </div>
       </div>
@@ -825,16 +836,16 @@
 
       <!-- left -->
       <div class="reveal">
-        <div class="section-label" style="color:#5ba624;margin-bottom:16px;">02 / Why Victoria Trusts Us</div>
+        <div class="section-label" style="color:#5ba624;margin-bottom:16px;">02 / Why Clients Trust Us</div>
         <h2 style="font-size:clamp(2.5rem,5.5vw,5rem);font-weight:600;letter-spacing:-0.03em;line-height:0.92;color:#f5f0e4;margin-bottom:28px;">
           Quality Work<br/>at a Price<br/><em style="color:#72cc2e;font-weight:300;">You'll Love.</em>
         </h2>
         <div class="moss-line" style="margin-bottom:32px;"></div>
         <p style="font-size:0.95rem;line-height:1.78;color:rgba(245,240,228,0.55);max-width:460px;margin-bottom:20px;">
-          Victoria Moss Removal was built on a simple philosophy: do what's right for the customer, every time. We're locals who know the Island — so we keep our prices honest and our standard exceptional.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <p style="font-size:0.95rem;line-height:1.78;color:rgba(245,240,228,0.55);max-width:460px;margin-bottom:40px;">
-          From free consultations to a 1–2 year warranty and complimentary gutter cleaning with every moss removal — we back our work and we stay accountable. If anything isn't right, we come back at no charge.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
         </p>
         <a href="#contact" class="btn-moss">
           Book Free Consultation
@@ -912,13 +923,13 @@
         </h2>
         <div class="moss-line" style="margin-bottom:28px;"></div>
         <p style="font-size:0.95rem;line-height:1.75;color:rgba(11,30,18,0.6);margin-bottom:18px;">
-          Moss removal protects your home from the kind of structural water damage that costs far more to fix than to prevent. Our team safely removes moss, lichen &amp; algae from all shingle types using methods calibrated to your specific roof.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <p style="font-size:0.95rem;line-height:1.75;color:rgba(11,30,18,0.6);margin-bottom:18px;">
-          We also tackle moss on driveways, brick walls, sheds, wood paneling, window trims, railings, and stairs — wherever growth has taken hold.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
         </p>
         <p style="font-size:0.92rem;line-height:1.72;color:rgba(11,30,18,0.55);margin-bottom:36px;padding:16px 20px;border-left:3px solid #5ba624;background:rgba(91,166,36,0.06);border-radius:0 4px 4px 0;">
-          <strong style="color:#163322;">Honest note:</strong> If water is already entering your home, the problem has likely progressed beyond moss. We'll always give you a straight assessment on-site — free of charge.
+          <strong style="color:#163322;">Honest note:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
         </p>
 
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;">
@@ -945,15 +956,15 @@
       <div class="section-label" style="color:#5ba624;margin-bottom:14px;">04 / Coverage</div>
       <h2 style="font-size:clamp(2.4rem,5vw,4.5rem);font-weight:600;letter-spacing:-0.03em;line-height:0.95;color:#0b1e12;margin-bottom:16px;">Service Areas</h2>
       <p style="font-size:0.9rem;line-height:1.7;color:rgba(11,30,18,0.5);max-width:400px;margin:0 auto 24px;">
-        Victoria, the Westshore, Saanich Peninsula, Cowichan Valley &amp; up to Nanaimo.
+        City, surrounding suburbs, rural areas &amp; neighbouring towns.
       </p>
       <div class="moss-line" style="margin:0 auto;"></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;" class="reveal d1">
-      <span class="area-chip">Victoria</span><span class="area-chip">Saanich</span><span class="area-chip">Oak Bay</span><span class="area-chip">James Bay</span><span class="area-chip">Downtown Victoria</span><span class="area-chip">Langford</span><span class="area-chip">Colwood</span><span class="area-chip">Sidney</span><span class="area-chip">North Saanich</span><span class="area-chip">Brentwood Bay</span><span class="area-chip">Royal Oak</span><span class="area-chip">Cordova Bay</span><span class="area-chip">Duncan</span><span class="area-chip">Cowichan</span><span class="area-chip">Shawnigan Lake</span><span class="area-chip">Ladysmith</span><span class="area-chip">Nanaimo</span><span class="area-chip">+ More</span>
+      <span class="area-chip">City Centre</span><span class="area-chip">North District</span><span class="area-chip">South District</span><span class="area-chip">East Side</span><span class="area-chip">West End</span><span class="area-chip">Uptown</span><span class="area-chip">Lakeview</span><span class="area-chip">Riverside</span><span class="area-chip">Hillside</span><span class="area-chip">Bayside</span><span class="area-chip">Oak Ridge</span><span class="area-chip">Creekside</span><span class="area-chip">Valleytown</span><span class="area-chip">Mapleton</span><span class="area-chip">Lakewood</span><span class="area-chip">Millhaven</span><span class="area-chip">Northgate</span><span class="area-chip">+ More</span>
     </div>
     <p style="text-align:center;margin-top:28px;font-size:0.82rem;color:rgba(11,30,18,0.35);" class="reveal d2">
-      Not sure if we cover your area? <a href="tel:2509848131" style="color:#5ba624;font-weight:600;text-decoration:none;">Give us a call</a> — we're always expanding.
+      Not sure if we cover your area? <a href="tel:5550000000" style="color:#5ba624;font-weight:600;text-decoration:none;">Give us a call</a> — we're always expanding.
     </p>
   </div>
 </section>
@@ -967,12 +978,12 @@
       Your Roof Deserves<br/><em style="color:#72cc2e;font-style:italic;font-weight:300;">Expert Attention</em>
     </h2>
     <p style="font-size:1rem;line-height:1.72;color:rgba(245,240,228,0.5);max-width:460px;margin:0 auto 40px;">
-      Call or fill out the form below. Fast free estimate, no pressure.
+      Call or fill out the form below for a free estimate.
     </p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-      <a href="tel:2509848131" class="btn-moss" style="font-size:0.85rem;padding:15px 30px;">
+      <a href="tel:5550000000" class="btn-moss" style="font-size:0.85rem;padding:15px 30px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .14h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Call 250-984-8131
+        Call (555) 000-0000
       </a>
       <a href="#contact" class="btn-outline" style="font-size:0.85rem;padding:14px 30px;">
         Send a Message
@@ -996,22 +1007,22 @@
         <p style="font-size:0.92rem;line-height:1.75;color:rgba(245,240,228,0.5);margin-bottom:40px;">Fill in the form and we'll get back to you fast with a no-obligation estimate tailored to your property.</p>
 
         <div style="display:flex;flex-direction:column;gap:20px;">
-          <a href="tel:2509848131" style="display:flex;align-items:center;gap:14px;text-decoration:none;group;">
+          <a href="tel:5550000000" style="display:flex;align-items:center;gap:14px;text-decoration:none;group;">
             <div style="width:44px;height:44px;border-radius:50%;background:rgba(91,166,36,0.1);border:1px solid rgba(91,166,36,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#72cc2e" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .14h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
               <div style="font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,228,0.3);">Phone</div>
-              <div style="font-size:1.1rem;font-weight:600;color:#72cc2e;">250-984-8131</div>
+              <div style="font-size:1.1rem;font-weight:600;color:#72cc2e;">(555) 000-0000</div>
             </div>
           </a>
-          <a href="mailto:info@victoriamossremoval.com" style="display:flex;align-items:center;gap:14px;text-decoration:none;">
+          <a href="mailto:hello@example.com" style="display:flex;align-items:center;gap:14px;text-decoration:none;">
             <div style="width:44px;height:44px;border-radius:50%;background:rgba(91,166,36,0.1);border:1px solid rgba(91,166,36,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#72cc2e" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
               <div style="font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,228,0.3);">Email</div>
-              <div style="font-size:0.88rem;font-weight:500;color:rgba(245,240,228,0.7);">info@victoriamossremoval.com</div>
+              <div style="font-size:0.88rem;font-weight:500;color:rgba(245,240,228,0.7);">hello@example.com</div>
             </div>
           </a>
           <div style="display:flex;align-items:center;gap:14px;">
@@ -1020,7 +1031,7 @@
             </div>
             <div>
               <div style="font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,228,0.3);">Address</div>
-              <div style="font-size:0.88rem;color:rgba(245,240,228,0.55);">4008 Glanford Ave<br/>Victoria, BC V8Z 3Z6</div>
+              <div style="font-size:0.88rem;color:rgba(245,240,228,0.55);">123 Main Street<br/>City, BC A1B 2C3</div>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:14px;">
@@ -1045,16 +1056,16 @@
             </div>
             <div class="field-wrap">
               <label class="field-label" for="f-phone">Phone *</label>
-              <input type="tel" id="f-phone" class="field-input" placeholder="250-XXX-XXXX" required />
+              <input type="tel" id="f-phone" class="field-input" placeholder="(555) XXX-XXXX" required />
             </div>
           </div>
           <div class="field-wrap">
             <label class="field-label" for="f-email">Email *</label>
-            <input type="email" id="f-email" class="field-input" placeholder="jane@example.com" required />
+            <input type="email" id="f-email" class="field-input" placeholder="name@example.com" required />
           </div>
           <div class="field-wrap">
             <label class="field-label" for="f-address">Service Address *</label>
-            <input type="text" id="f-address" class="field-input" placeholder="123 Main St, Victoria, BC" required />
+            <input type="text" id="f-address" class="field-input" placeholder="123 Main St, City, BC" required />
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <div class="field-wrap">
@@ -1116,7 +1127,7 @@
             <div style="font-size:0.58rem;letter-spacing:0.13em;text-transform:uppercase;color:#72cc2e;font-weight:600;">Exterior Cleaning Experts</div>
           </div>
         </div>
-        <p style="font-size:0.85rem;line-height:1.7;color:rgba(245,240,228,0.35);max-width:300px;">Victoria's trusted roof moss removal and exterior cleaning specialists. Fair prices, strong warranty, great people.</p>
+        <p style="font-size:0.85rem;line-height:1.7;color:rgba(245,240,228,0.35);max-width:300px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fair prices, strong warranty, great service.</p>
       </div>
       <div>
         <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.25);margin-bottom:16px;">Services</div>
@@ -1125,16 +1136,16 @@
           <a href="#services" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">Gutter Cleaning</a>
           <a href="#services" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">Pressure Washing</a>
           <a href="#services" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">Window Cleaning</a>
-          <a href="#services" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">Gutter Installation & Repair</a>
+          <a href="#services" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">Gutter Installation &amp; Repair</a>
           <a href="#services" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">Christmas Light Installation</a>
         </div>
       </div>
       <div>
         <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,228,0.25);margin-bottom:16px;">Contact</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <a href="tel:2509848131" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#72cc2e'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">250-984-8131</a>
-          <a href="mailto:info@victoriamossremoval.com" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">info@victoriamossremoval.com</a>
-          <span style="font-size:0.84rem;color:rgba(245,240,228,0.3);">4008 Glanford Ave, Victoria BC</span>
+          <a href="tel:5550000000" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#72cc2e'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">(555) 000-0000</a>
+          <a href="mailto:hello@example.com" style="font-size:0.84rem;color:rgba(245,240,228,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#f5f0e4'" onmouseout="this.style.color='rgba(245,240,228,0.45)'">hello@example.com</a>
+          <span style="font-size:0.84rem;color:rgba(245,240,228,0.3);">123 Main Street, City BC</span>
           <span style="font-size:0.84rem;color:rgba(245,240,228,0.3);">Mon–Fri 7AM–7PM</span>
         </div>
       </div>
